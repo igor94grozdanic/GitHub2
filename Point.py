@@ -1,17 +1,16 @@
 import math
 
 class Point:
-    def __init__(self, p='point_id',y=7500000,x=4000000):
-        self.p=p
-        self.y=y
-        self.x=x
+    def __init__(self,y=7500000,x=4000000):
+        self.__y=y
+        self.__x=x
 
     def getCoord(self):
-        return self.y, self.x
+        return self.__y, self.__x
 
-    def azimuth(od, ka):
-        dy = ka[0] - od[0]
-        dx = ka[1] - od[1]
+    def azimuth(self, ka):
+        dy = ka.getCoord()[0] - self.getCoord()[0]
+        dx = ka.getCoord()[1] - self.getCoord()[1]
         ni = 0
         if dy == 0:
             if dx > 0:
@@ -43,3 +42,12 @@ class Point:
             # print("4. kv:")
             ni = math.atan(abs(dx / dy)) + math.radians(270)
             return ni
+
+p1 = Point(7500000 ,4500000)
+p2 = Point(7500001 ,4500001)
+
+print (p1.getCoord())
+print (p2.getCoord())
+dir = (p1.azimuth(p2)*180)/math.pi
+
+print ('Direkcioni ugao izmedju tacaka je {}!'.format(str(dir)))
