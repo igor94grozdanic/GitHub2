@@ -1,9 +1,10 @@
 from Point import Point
 
-a = Point('1', 7512345, 4125892)
-list = a.getCoord()
+p1 = Point(7500000 ,4500000)
+p2 = Point(7500001 ,4500001)
 
-print(list[0])
+print (p1.getCoord())
+print (p2.getCoord())
+dir = (p1.azimuth(p2)*180)/math.pi
 
-
-
+print ('Direkcioni ugao izmedju tacaka je {}!'.format(str(dir)))
