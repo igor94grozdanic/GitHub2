@@ -7,7 +7,7 @@ class Point:
         self.x=x
 
     def getCoord(self):
-        return self._y, self._x
+        return self.y, self.x
 
     def azimuth(od, ka):
         dy = ka[0] - od[0]
