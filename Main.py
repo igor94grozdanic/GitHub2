@@ -10,6 +10,6 @@ print (p2.getCoord())
 dir = (p1.azimuth(p2)*180)/math.pi
 dist = p1.distance(p2)
 
-print ('Direkcioni ugao izmedju tacaka je {}!'.format(str(dir)))
+print ('Direkcioni ugao izmedju tacaka je {} stepeni!'.format(str(dir)))
 
-print ('Duzina izmedju ovih tacaka je {}!'.format(str(dist)))
+print ('Duzina izmedju ovih tacaka je {} m!'.format(str(dist)))
