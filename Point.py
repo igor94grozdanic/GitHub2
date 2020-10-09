@@ -48,4 +48,3 @@ class Point:
         dx = to.getCoord()[1] - self.getCoord()[1]
         d = math.sqrt(math.pow(dy,2)+math.pow(dx,2))
         return d
-
