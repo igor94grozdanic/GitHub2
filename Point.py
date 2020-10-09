@@ -48,3 +48,11 @@ class Point:
         dx = to.getCoord()[1] - self.getCoord()[1]
         d = math.sqrt(math.pow(dy,2)+math.pow(dx,2))
         return d
+
+    def newBorderAzimuth(self, az):
+        piPola = math.pi/2
+        if az > 3 * piPola:
+            return az - piPola
+        else:
+            return az + piPola
+
